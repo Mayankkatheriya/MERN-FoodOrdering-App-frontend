@@ -5,6 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { nanoid } from "nanoid";
 
 type Props = {
   onChange: (value: string) => void;
@@ -41,6 +42,7 @@ const SortOptionDropdown = ({ onChange, sortOption }: Props) => {
       <DropdownMenuContent>
         {SORT_OPTIONS.map((option) => (
           <DropdownMenuItem
+            key={nanoid()}
             className="cursor-pointer"
             onClick={() => onChange(option.value)}
           >

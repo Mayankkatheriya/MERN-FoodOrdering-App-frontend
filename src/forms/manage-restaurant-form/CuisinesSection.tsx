@@ -7,6 +7,7 @@ import {
 import { cuisineList } from "@/config/restaurant-options-config";
 import { useFormContext } from "react-hook-form";
 import CuisineCheckbox from "./CuisineCheckbox";
+import { nanoid } from 'nanoid';
 
 const CuisinesSection = () => {
   const { control } = useFormContext();
@@ -26,7 +27,7 @@ const CuisinesSection = () => {
           <FormItem>
             <div className="grid md:grid-cols-5 gap-1">
               {cuisineList.map((cuisineItem) => (
-                <CuisineCheckbox cuisine={cuisineItem} field={field} />
+                <CuisineCheckbox key={nanoid()} cuisine={cuisineItem} field={field} />
               ))}
             </div>
             <FormMessage />

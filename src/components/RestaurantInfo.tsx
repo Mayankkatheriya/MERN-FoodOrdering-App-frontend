@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Dot } from "lucide-react";
+import { nanoid } from "nanoid";
 
 type Props = {
   restaurant: Restaurant;
@@ -25,7 +26,7 @@ const RestaurantInfo = ({ restaurant }: Props) => {
       </CardHeader>
       <CardContent className="flex">
         {restaurant.cuisines.map((item, index) => (
-          <span className="flex">
+          <span key={nanoid()} className="flex">
             <span>{item}</span>
             {index < restaurant.cuisines.length - 1 && <Dot />}
           </span>

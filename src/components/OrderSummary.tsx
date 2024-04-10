@@ -4,6 +4,7 @@ import { CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Separator } from "./ui/separator";
 import { Trash } from "lucide-react";
+import { nanoid } from "nanoid";
 
 type Props = {
   restaurant: Restaurant;
@@ -33,7 +34,7 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
       </CardHeader>
       <CardContent className="flex flex-col gap-5">
         {cartItems.map((item) => (
-          <div className="flex justify-between">
+          <div key={nanoid()} className="flex justify-between">
             <span>
               <Badge variant="outline" className="mr-2">
                 {item.quantity}

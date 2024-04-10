@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { FormDescription, FormField, FormItem } from "@/components/ui/form";
 import { useFieldArray, useFormContext } from "react-hook-form";
 import MenuItemInput from "./MenuItemInput";
+import { nanoid } from 'nanoid';
 
 const MenuSection = () => {
   const { control } = useFormContext();
@@ -26,6 +27,7 @@ const MenuSection = () => {
           <FormItem className="flex flex-col gap-2">
             {fields.map((_, index) => (
               <MenuItemInput
+              key={nanoid()}
                 index={index}
                 removeMenuItem={() => remove(index)}
               />

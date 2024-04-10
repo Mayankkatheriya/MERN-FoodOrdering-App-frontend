@@ -7,6 +7,7 @@ import SearchResultInfo from "@/components/SearchResultInfo";
 import SortOptionDropdown from "@/components/SortOptionDropdown";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { nanoid } from 'nanoid';
 
 export type SearchState = {
   searchQuery: string;
@@ -103,7 +104,7 @@ const SearchPage = () => {
         </div>
 
         {results.data.map((restaurant) => (
-          <SearchResultCard restaurant={restaurant} />
+          <SearchResultCard key={nanoid()} restaurant={restaurant} />
         ))}
         <PaginationSelector
           page={results.pagination.page}

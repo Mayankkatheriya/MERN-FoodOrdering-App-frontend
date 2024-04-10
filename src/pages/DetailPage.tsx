@@ -7,6 +7,7 @@ import { Card, CardFooter } from "@/components/ui/card";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { MenuItem as MenuItemType } from "../types";
+import { nanoid } from "nanoid";
 // import CheckoutButton from "@/components/CheckoutButton";
 // import { UserFormData } from "@/forms/user-profile-form/UserProfileForm";
 // import { useCreateCheckoutSession } from "@/api/OrderApi";
@@ -122,6 +123,7 @@ const DetailPage = () => {
           <span className="text-2xl font-bold tracking-tight">Menu</span>
           {restaurant.menuItems.map((menuItem) => (
             <MenuItem
+            key={nanoid()}
               menuItem={menuItem}
               addToCart={() => addToCart(menuItem)}
             />

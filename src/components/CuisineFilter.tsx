@@ -3,6 +3,7 @@ import { Label } from "./ui/label";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import { ChangeEvent } from "react";
 import { Button } from "./ui/button";
+import { nanoid } from 'nanoid';
 
 type Props = {
   onChange: (cuisines: string[]) => void;
@@ -48,7 +49,7 @@ const CuisineFilter = ({
           .map((cuisine) => {
             const isSelected = selectedCuisines.includes(cuisine);
             return (
-              <div className="flex">
+              <div key={nanoid()} className="flex">
                 <input
                   id={`cuisine_${cuisine}`}
                   type="checkbox"
@@ -59,11 +60,10 @@ const CuisineFilter = ({
                 />
                 <Label
                   htmlFor={`cuisine_${cuisine}`}
-                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-full px-4 py-2 font-semibold ${
-                    isSelected
+                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-full px-4 py-2 font-semibold ${isSelected
                       ? "border border-green-600 text-green-600"
                       : "border border-slate-300"
-                  }`}
+                    }`}
                 >
                   {isSelected && <Check size={20} strokeWidth={3} />}
                   {cuisine}

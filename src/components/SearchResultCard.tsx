@@ -2,6 +2,7 @@ import { Restaurant } from "@/types";
 import { Link } from "react-router-dom";
 import { AspectRatio } from "./ui/aspect-ratio";
 import { Banknote, Clock, Dot } from "lucide-react";
+import { nanoid } from 'nanoid';
 
 type Props = {
   restaurant: Restaurant;
@@ -26,7 +27,7 @@ const SearchResultCard = ({ restaurant }: Props) => {
         <div id="card-content" className="grid md:grid-cols-2 gap-2">
           <div className="flex flex-row flex-wrap">
             {restaurant.cuisines.map((item, index) => (
-              <span className="flex">
+              <span key={nanoid()} className="flex">
                 <span>{item}</span>
                 {index < restaurant.cuisines.length - 1 && <Dot />}
               </span>
