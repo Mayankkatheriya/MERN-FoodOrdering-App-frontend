@@ -1,30 +1,13 @@
-# React + TypeScript + Vite
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/53e6db74-df30-4097-9c73-3dd04a4664ce)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/3e170040-7286-4225-ad97-6f244913aa20)
 
-Currently, two official plugins are available:
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/0745e5ed-8b45-444e-9344-20f3639533b0)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/1946b973-100e-4e05-85f3-329dda490fd7)
 
-## Expanding the ESLint configuration
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/df567aac-986f-4988-86e3-efce6c99a1c6)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/f868d4f6-4460-4ea3-9f51-f7856fb66a49)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![image](https://github.com/Mayankkatheriya/MERN-FoodOrdering-App-frontend/assets/128832286/0e79bf1c-9f66-46df-8c1a-ab1f49ff731b)
